@@ -175,6 +175,4 @@ cython_debug/
 
 best.pt
 08fd33_4.mp4
-camera_movement_stub.pkl
-track_stubs.pkl
 runs/
