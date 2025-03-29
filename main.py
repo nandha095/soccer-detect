@@ -7,7 +7,7 @@ import numpy as np
 
 def main():
     # Read Video
-    video_frames = read_video('input_videos/input_video.mp4')
+    video_frames = read_video('input_videos/input_video.mp4') ## place your desired source video
 
     # Initialize Tracker
     tracker = Tracker('models/best.pt')

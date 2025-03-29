@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-4. create a 'input_videos' folder in root directory & place in your source videos
+4. create a 'input_videos' folder in root maindirectory & place in your source videos
 5. create a 'output_videos' folder in root directory
 3. The processed video will be saved in the `output_videos` directory
 
