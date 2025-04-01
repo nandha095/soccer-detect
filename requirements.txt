@@ -5,3 +5,4 @@ OpenCV
 NumPy
 Matplotlib
 Pandas
+scikit-learn
