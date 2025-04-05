@@ -20,10 +20,11 @@ class Tracker:
                 for track_id, track_info in track.items():
                     bbox = track_info['bbox']
                     if object == 'ball':
-                        position= get_center_of_bbox(bbox)
+                        position = get_center_of_bbox(bbox)
                     else:
                         position = get_foot_position(bbox)
                     tracks[object][frame_num][track_id]['position'] = position
+                    tracks[object][frame_num][track_id]['position_adjusted'] = position
 
     def interpolate_ball_positions(self,ball_positions):
         ball_positions = [x.get(1,{}).get('bbox',[]) for x in ball_positions]
@@ -183,6 +184,61 @@ class Tracker:
 
         return frame
 
+    def draw_ball_paths(self, frame, tracks, frame_num, path_history=10):
+        """Draw paths showing ball movement between players."""
+        # Get recent frames to show path history
+        start_frame = max(0, frame_num - path_history)
+        
+        # Collect recent ball positions and player assignments
+        ball_positions = []
+        for i in range(start_frame, frame_num + 1):
+            if tracks["ball"][i] and 1 in tracks["ball"][i]:
+                ball_pos = get_center_of_bbox(tracks["ball"][i][1]["bbox"])
+                ball_positions.append((ball_pos, i))
+        
+        # Draw path lines
+        if len(ball_positions) > 1:
+            for i in range(len(ball_positions) - 1):
+                start_pos, start_frame = ball_positions[i]
+                end_pos, end_frame = ball_positions[i+1]
+                
+                start_point = (int(start_pos[0]), int(start_pos[1]))
+                end_point = (int(end_pos[0]), int(end_pos[1]))
+                
+                # Calculate movement distance
+                movement = np.sqrt((end_pos[0] - start_pos[0])**2 + (end_pos[1] - start_pos[1])**2)
+                
+                # Calculate alpha for fade effect
+                alpha = (i + 1) / len(ball_positions)
+                
+                # Use different colors based on movement speed
+                if movement > 50:  # Fast movement (likely a pass)
+                    color = (0, 165, 255)  # Orange
+                else:
+                    color = (0, 255, 0)  # Green for slower movement
+                
+                # Draw line with thickness based on recency
+                thickness = int(2 * alpha)
+                if thickness > 0:
+                    cv2.line(frame, start_point, end_point, color, thickness)
+                    
+                    # Draw arrow for direction
+                    if movement > 20:  # Only draw arrows for significant movement
+                        angle = np.arctan2(end_point[1] - start_point[1], end_point[0] - start_point[0])
+                        arrow_length = 20
+                        arrow_angle = np.pi/6  # 30 degrees
+                        
+                        # Calculate arrow points
+                        p1 = (int(end_point[0] - arrow_length * np.cos(angle + arrow_angle)),
+                              int(end_point[1] - arrow_length * np.sin(angle + arrow_angle)))
+                        p2 = (int(end_point[0] - arrow_length * np.cos(angle - arrow_angle)),
+                              int(end_point[1] - arrow_length * np.sin(angle - arrow_angle)))
+                        
+                        cv2.line(frame, end_point, p1, color, thickness)
+                        cv2.line(frame, end_point, p2, color, thickness)
+        
+        return frame
+
     def draw_annotations(self,video_frames, tracks,team_ball_control):
         output_video_frames= []
         for frame_num, frame in enumerate(video_frames):
@@ -191,6 +247,9 @@ class Tracker:
             player_dict = tracks["players"][frame_num]
             ball_dict = tracks["ball"][frame_num]
             referee_dict = tracks["referees"][frame_num]
+
+            # Draw ball paths
+            frame = self.draw_ball_paths(frame, tracks, frame_num)
 
             # Draw Players
             for track_id, player in player_dict.items():
