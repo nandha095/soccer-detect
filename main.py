@@ -12,6 +12,9 @@ from pass_detector import PassDetector
 import json
 import os
 from datetime import datetime
+import threading
+import concurrent.futures
+import gc  # For garbage collection
 
 def save_tracking_results(tracks, team_ball_control, shot_events, dribble_events, pass_events, output_path):
     """Save tracking results to a JSON file."""
@@ -367,20 +370,111 @@ def main():
     print("Football Stats Analyzer with Advanced Metrics")
     print("=============================================\n")
     
-    video_frames = read_video('input_videos/7.mp4') ## change source video here
-    print(f"Number of video frames: {len(video_frames)}")
-    
-    tracker = Tracker('models/best.pt')
-    tracks = tracker.get_object_tracks(video_frames,
-                                       read_from_stub=True,
-                                       stub_path='stubs/track_stubs.pkl')
+    # Set batch size for processing frames in chunks
+    BATCH_SIZE = 100  # Adjust based on your system's memory
 
+    # Read video frames in batches
+    video_path = 'input_videos/1.mp4'  # change source video here
+    
+    # Get video info first
+    cap = cv2.VideoCapture(video_path)
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    cap.release()
+    
+    print(f"Total video frames: {total_frames}")
+    
+    # Initialize tracker outside of batch processing
+    tracker = Tracker('models/best.pt')
+    
+    # Load tracking data from stub if available
+    try:
+        tracks = tracker.get_object_tracks(None, read_from_stub=True, stub_path='stubs/track_stubs.pkl')
+        using_stubs = True
+    except:
+        tracks = {'players': [], 'ball': [], 'referees': []}  # Initialize with all required keys
+        using_stubs = False
+    
+    # Ensure 'referees' key exists in tracks
+    if 'referees' not in tracks:
+        tracks['referees'] = [{} for _ in range(len(tracks['players']))]
+    
+    # Process stubs first if available
+    if using_stubs:
+        num_track_frames = len(tracks['players'])
+        print(f"Loaded {num_track_frames} frames from tracking stubs")
+        
+        # If using stubs, we still need to read video for visualization
+        all_video_frames = []
+        for start_idx in range(0, min(total_frames, num_track_frames), BATCH_SIZE):
+            end_idx = min(start_idx + BATCH_SIZE, total_frames, num_track_frames)
+            print(f"Reading video batch: frames {start_idx} to {end_idx}")
+            
+            cap = cv2.VideoCapture(video_path)
+            cap.set(cv2.CAP_PROP_POS_FRAMES, start_idx)
+            batch_frames = []
+            
+            for _ in range(end_idx - start_idx):
+                ret, frame = cap.read()
+                if ret:
+                    batch_frames.append(frame)
+                else:
+                    break
+            
+            cap.release()
+            all_video_frames.extend(batch_frames)
+            
+            # Force garbage collection
+            del batch_frames
+            gc.collect()
+    else:
+        # Process video in batches for tracking
+        all_video_frames = []
+        for start_idx in range(0, total_frames, BATCH_SIZE):
+            end_idx = min(start_idx + BATCH_SIZE, total_frames)
+            print(f"Processing batch: frames {start_idx} to {end_idx}")
+            
+            # Read batch of frames
+            cap = cv2.VideoCapture(video_path)
+            cap.set(cv2.CAP_PROP_POS_FRAMES, start_idx)
+            batch_frames = []
+            
+            for _ in range(end_idx - start_idx):
+                ret, frame = cap.read()
+                if ret:
+                    batch_frames.append(frame)
+                else:
+                    break
+            
+            cap.release()
+            
+            # Track objects in the batch
+            batch_tracks = tracker.get_object_tracks(batch_frames, read_from_stub=False)
+            
+            # Merge batch tracking results with overall tracks
+            tracks['players'].extend(batch_tracks['players'])
+            tracks['ball'].extend(batch_tracks['ball'])
+            
+            # Ensure we also handle referees properly
+            if 'referees' in batch_tracks:
+                tracks['referees'].extend(batch_tracks['referees'])
+            else:
+                # If no referees detected, add empty dictionaries
+                tracks['referees'].extend([{} for _ in range(len(batch_tracks['players']))])
+            
+            # Keep frames for visualization
+            all_video_frames.extend(batch_frames)
+            
+            # Force garbage collection
+            del batch_frames, batch_tracks
+            gc.collect()
+    
     # Ensure we only process frames that exist in both video and tracking data
     num_track_frames = len(tracks['players'])
-    num_video_frames = len(video_frames)
+    num_video_frames = len(all_video_frames)
     num_frames = min(num_track_frames, num_video_frames)
     
     print(f"Number of tracking frames: {num_track_frames}")
+    print(f"Number of video frames: {num_video_frames}")
     print(f"Will process {num_frames} frames")
 
     # Trim tracks to match video length if necessary
@@ -389,46 +483,113 @@ def main():
             tracks[key] = tracks[key][:num_frames]
 
     print("\nAnalyzing player positions and movements...")
-    tracker.add_position_to_tracks(tracks)
+    # Process position data in parallel
+    def add_positions_batch(start_idx, end_idx):
+        tracker.add_position_to_tracks({
+            'players': tracks['players'][start_idx:end_idx],
+            'ball': tracks['ball'][start_idx:end_idx]
+        })
     
+    # Use thread pool for parallel processing
+    with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = []
+        for start_idx in range(0, num_frames, BATCH_SIZE):
+            end_idx = min(start_idx + BATCH_SIZE, num_frames)
+            futures.append(executor.submit(add_positions_batch, start_idx, end_idx))
+        
+        # Wait for all tasks to complete
+        for future in concurrent.futures.as_completed(futures):
+            future.result()
+    
+    # Create view transformer
     view_transformer = ViewTransformer()
-    view_transformer.add_transformed_position_to_tracks(tracks)
     
+    # Process transformations in parallel
+    def transform_positions_batch(start_idx, end_idx):
+        view_transformer.add_transformed_position_to_tracks({
+            'players': tracks['players'][start_idx:end_idx],
+            'ball': tracks['ball'][start_idx:end_idx]
+        })
+    
+    with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = []
+        for start_idx in range(0, num_frames, BATCH_SIZE):
+            end_idx = min(start_idx + BATCH_SIZE, num_frames)
+            futures.append(executor.submit(transform_positions_batch, start_idx, end_idx))
+        
+        # Wait for all tasks to complete
+        for future in concurrent.futures.as_completed(futures):
+            future.result()
+    
+    # Interpolate ball positions - this shouldn't be parallelized as it needs the entire sequence
     tracks["ball"] = tracker.interpolate_ball_positions(tracks["ball"])
     
     print("Calculating player speeds and distances...")
+    # Create speed estimator
     speed_and_distance_estimator = SpeedAndDistance_Estimator()
-    speed_and_distance_estimator.add_speed_and_distance_to_tracks(tracks)
+    
+    # Process speed calculations in parallel
+    def calculate_speed_batch(start_idx, end_idx):
+        speed_and_distance_estimator.add_speed_and_distance_to_tracks({
+            'players': tracks['players'][start_idx:end_idx],
+            'ball': tracks['ball'][start_idx:end_idx]
+        })
+    
+    with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = []
+        for start_idx in range(0, num_frames, BATCH_SIZE):
+            end_idx = min(start_idx + BATCH_SIZE, num_frames)
+            futures.append(executor.submit(calculate_speed_batch, start_idx, end_idx))
+        
+        # Wait for all tasks to complete
+        for future in concurrent.futures.as_completed(futures):
+            future.result()
     
     print("Identifying team affiliations...")
     team_assigner = TeamAssigner()
     if tracks['players'] and tracks['players'][0]:  # Check if we have player tracks
-        team_assigner.assign_team_color(video_frames[0], tracks['players'][0])
+        team_assigner.assign_team_color(all_video_frames[0], tracks['players'][0])
     else:
         print("Warning: No player tracks found in first frame")
         return
     
-    for frame_num in range(num_frames):
-        player_track = tracks['players'][frame_num]
-        for player_id, track in player_track.items():
-            if 'bbox' not in track:
-                continue
-            team = team_assigner.get_player_team(video_frames[frame_num],   
-                                                track['bbox'],
-                                                player_id)
-            tracks['players'][frame_num][player_id]['team'] = team 
-            tracks['players'][frame_num][player_id]['team_color'] = team_assigner.team_colors[team]
-
+    # Process team assignments in parallel batches
+    def assign_teams_batch(start_idx, end_idx):
+        for frame_num in range(start_idx, end_idx):
+            player_track = tracks['players'][frame_num]
+            for player_id, track in player_track.items():
+                if 'bbox' not in track:
+                    continue
+                team = team_assigner.get_player_team(all_video_frames[frame_num],
+                                                  track['bbox'],
+                                                  player_id)
+                tracks['players'][frame_num][player_id]['team'] = team
+                tracks['players'][frame_num][player_id]['team_color'] = team_assigner.team_colors[team]
+    
+    with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = []
+        for start_idx in range(0, num_frames, BATCH_SIZE):
+            end_idx = min(start_idx + BATCH_SIZE, num_frames)
+            futures.append(executor.submit(assign_teams_batch, start_idx, end_idx))
+        
+        # Wait for all tasks to complete
+        for future in concurrent.futures.as_completed(futures):
+            future.result()
+    
     print("Analyzing ball possession...")
     player_assigner = PlayerBallAssigner()
     team_ball_control = []
     last_team = None
     
+    # Ball possession analysis cannot be easily parallelized due to the dependency on last_team
+    # But we can optimize the loop
     for frame_num in range(num_frames):
         player_track = tracks['players'][frame_num]
-        if (frame_num >= len(tracks['ball']) or 
-            1 not in tracks['ball'][frame_num] or 
-            'bbox' not in tracks['ball'][frame_num][1]):
+        has_valid_ball = (frame_num < len(tracks['ball']) and 
+                          1 in tracks['ball'][frame_num] and 
+                          'bbox' in tracks['ball'][frame_num][1])
+        
+        if not has_valid_ball:
             team_ball_control.append(last_team if last_team is not None else 1)
             continue
             
@@ -444,13 +605,48 @@ def main():
             team_ball_control.append(last_team if last_team is not None else 1)
     team_ball_control = np.array(team_ball_control)
 
-    # Detect shots and goals
-    print("\n======== SHOT DETECTION ========")
-    print("Analyzing ball trajectories for shot attempts...")
-    shot_detector = ShotDetector()
-    shot_events = shot_detector.detect_goals(video_frames[:num_frames], tracks)
+    # Run detectors in parallel
+    print("\nRunning multiple detectors in parallel...")
     
+    shot_events = []
+    dribble_events = []
+    pass_events = []
+    
+    # Define thread functions for each detector
+    def detect_shots():
+        nonlocal shot_events
+        print("Analyzing ball trajectories for shot attempts...")
+        shot_detector = ShotDetector()
+        shot_events = shot_detector.detect_goals(all_video_frames[:num_frames], tracks)
+    
+    def detect_dribbles():
+        nonlocal dribble_events
+        print("Analyzing player movements for dribbling actions...")
+        dribble_detector = DribbleDetector()
+        dribble_events = dribble_detector.detect_dribbles(all_video_frames[:num_frames], tracks, team_ball_control)
+    
+    def detect_passes():
+        nonlocal pass_events
+        print("Analyzing ball movements for passing events...")
+        pass_detector = PassDetector()
+        pass_events = pass_detector.detect_passes(all_video_frames[:num_frames], tracks, team_ball_control)
+    
+    # Create and start threads for detectors
+    shot_thread = threading.Thread(target=detect_shots)
+    dribble_thread = threading.Thread(target=detect_dribbles)
+    pass_thread = threading.Thread(target=detect_passes)
+    
+    shot_thread.start()
+    dribble_thread.start()
+    pass_thread.start()
+    
+    # Wait for all detector threads to complete
+    shot_thread.join()
+    dribble_thread.join()
+    pass_thread.join()
+
     # Print shot summary 
+    print("\n======== SHOT DETECTION ========")
     if shot_events:
         print(f"\nDetected {len(shot_events)} shot attempts:")
         close_shots = len([s for s in shot_events if s["type"] == "close"])
@@ -475,13 +671,8 @@ def main():
         print("No shots detected in this video segment.")
     print("===============================\n")
     
-    # Detect dribbles
-    print("\n====== DRIBBLE DETECTION ======")
-    print("Analyzing player movements for dribbling actions...")
-    dribble_detector = DribbleDetector()
-    dribble_events = dribble_detector.detect_dribbles(video_frames[:num_frames], tracks, team_ball_control)
-    
     # Print dribble summary
+    print("\n====== DRIBBLE DETECTION ======")
     if dribble_events:
         print(f"\nDetected {len(dribble_events)} dribbling actions:")
         
@@ -513,13 +704,8 @@ def main():
         print("No dribbling actions detected in this video segment.")
     print("===============================\n")
     
-    # Detect passes
-    print("\n======== PASS DETECTION ========")
-    print("Analyzing ball movements for passing events...")
-    pass_detector = PassDetector()
-    pass_events = pass_detector.detect_passes(video_frames[:num_frames], tracks, team_ball_control)
-    
     # Print pass summary
+    print("\n======== PASS DETECTION ========")
     if pass_events:
         completed_passes = len([p for p in pass_events if p["successful"] is True])
         failed_passes = len([p for p in pass_events if p["successful"] is False])
@@ -562,18 +748,49 @@ def main():
     results_path = f'results/tracking_results_{timestamp}.json'
     save_tracking_results(tracks, team_ball_control, shot_events, dribble_events, pass_events, results_path)
     
-    # Process only available frames for output
+    # Process output video in batches to reduce memory usage
     print("Generating annotated video with player tracking...")
-    output_video_frames = tracker.draw_annotations(video_frames[:num_frames], 
-                                                 tracks, 
-                                                 team_ball_control)
-    speed_and_distance_estimator.draw_speed_and_distance(output_video_frames, tracks)
+    os.makedirs('output_videos', exist_ok=True)
     
-    # Skip visualizing shots and dribbles on the video frames (but data is still collected and stored in JSON)
-    # output_video_frames = shot_detector.draw_shot_annotations(output_video_frames, shot_events)
-    # output_video_frames = dribble_detector.draw_dribble_annotations(output_video_frames, tracks)
+    # Create video writer
+    first_frame = all_video_frames[0]
+    height, width = first_frame.shape[:2]
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    out = cv2.VideoWriter('output_videos/output_video.avi', fourcc, 30.0, (width, height))
     
-    save_video(output_video_frames, 'output_videos/output_video.avi')
+    # Process and write frames in batches
+    for start_idx in range(0, num_frames, BATCH_SIZE):
+        end_idx = min(start_idx + BATCH_SIZE, num_frames)
+        print(f"Processing output video batch: frames {start_idx} to {end_idx}")
+        
+        # Get batch frames
+        batch_frames = all_video_frames[start_idx:end_idx]
+        
+        # Create batch tracks
+        batch_tracks = {
+            'players': tracks['players'][start_idx:end_idx],
+            'ball': tracks['ball'][start_idx:end_idx],
+            'referees': tracks['referees'][start_idx:end_idx]  # Add referees to the batch
+        }
+        
+        # Get ball control for batch
+        batch_ball_control = team_ball_control[start_idx:end_idx]
+        
+        # Draw annotations
+        annotated_frames = tracker.draw_annotations(batch_frames, batch_tracks, batch_ball_control)
+        speed_and_distance_estimator.draw_speed_and_distance(annotated_frames, batch_tracks)
+        
+        # Write frames
+        for frame in annotated_frames:
+            out.write(frame)
+        
+        # Force garbage collection
+        del batch_frames, batch_tracks, annotated_frames
+        gc.collect()
+    
+    # Release video writer
+    out.release()
+    
     print(f"Processing complete. Results saved to {results_path}")
     print("Video with player tracking saved to output_videos/output_video.avi")
     print(f"Shot, dribble, and pass statistics are available in the JSON file: {results_path}")

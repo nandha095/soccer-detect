@@ -1,8 +1,8 @@
 ## Python 3.x
 ultralytics
 supervision
-OpenCV
-NumPy
+opencv-python
+numpy
 Matplotlib
-Pandas
+pandas
 scikit-learn
