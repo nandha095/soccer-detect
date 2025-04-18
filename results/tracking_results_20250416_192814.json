@@ -1,0 +1,2194 @@
+{
+    "timestamp": "2025-04-16 19:28:14",
+    "players": {
+        "1": {
+            "team": 1,
+            "frames_tracked": 195,
+            "total_distance": 0.0003889748177350043,
+            "max_speed": 19.149505529919946,
+            "avg_speed": 4.793694126740889,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "2": {
+            "team": 2,
+            "frames_tracked": 92,
+            "total_distance": 0.0006760627159932346,
+            "max_speed": 12.631495477565622,
+            "avg_speed": 3.824014351469742,
+            "ball_possession_frames": 1,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 1,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 1,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "3": {
+            "team": 1,
+            "frames_tracked": 17,
+            "total_distance": 0.0023461202557356065,
+            "max_speed": 15.859901462500044,
+            "avg_speed": 7.208922301270393,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "5": {
+            "team": 1,
+            "frames_tracked": 78,
+            "total_distance": 0.0019140153149592011,
+            "max_speed": 14.827358045438459,
+            "avg_speed": 4.399624028558985,
+            "ball_possession_frames": 21,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 1,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 1,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "6": {
+            "team": 2,
+            "frames_tracked": 204,
+            "total_distance": 0.0020053559347604066,
+            "max_speed": 10.78320292883336,
+            "avg_speed": 5.418962814638825,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "7": {
+            "team": 1,
+            "frames_tracked": 204,
+            "total_distance": 0.00115754587071413,
+            "max_speed": 15.042670410403058,
+            "avg_speed": 5.192573212636425,
+            "ball_possession_frames": 6,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 1,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "8": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 5,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 1,
+                "unsuccessful": 1,
+                "dribble": {
+                    "successful": 1,
+                    "unsuccessful": 1
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "9": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "10": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "11": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 14,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 1,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "12": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "13": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "14": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "15": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 19,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                }
+            },
+            "dribbles": {
+                "successful": 2,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 2,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "17": {
+            "team": 2,
+            "frames_tracked": 101,
+            "total_distance": 0.001428904266546373,
+            "max_speed": 13.515574871031784,
+            "avg_speed": 5.753938015708029,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "18": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "19": {
+            "team": 2,
+            "frames_tracked": 58,
+            "total_distance": 0.002211307658516788,
+            "max_speed": 19.8872274104949,
+            "avg_speed": 8.756140422440875,
+            "ball_possession_frames": 12,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 2,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 2,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "20": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "21": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 48,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 1,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 1,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "22": {
+            "team": 1,
+            "frames_tracked": 40,
+            "total_distance": 0.0010355442209437516,
+            "max_speed": 16.975052915307586,
+            "avg_speed": 5.564732116520983,
+            "ball_possession_frames": 20,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 1,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "24": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 61,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 1,
+                "unsuccessful": 1,
+                "dribble": {
+                    "successful": 1,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "25": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "29": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "35": {
+            "team": 2,
+            "frames_tracked": 9,
+            "total_distance": 0.0006362733931474155,
+            "max_speed": 3.1633603605778804,
+            "avg_speed": 2.154357186077235,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "40": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "16": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "51": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "50": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "62": {
+            "team": 1,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "64": {
+            "team": 2,
+            "frames_tracked": 0,
+            "total_distance": 0,
+            "max_speed": 0,
+            "avg_speed": 0,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        },
+        "69": {
+            "team": 2,
+            "frames_tracked": 25,
+            "total_distance": 0.0008018837307346027,
+            "max_speed": 18.456009318584975,
+            "avg_speed": 9.582148459325454,
+            "ball_possession_frames": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "dribble": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            }
+        }
+    },
+    "team_stats": {
+        "team1": {
+            "total_distance": 0.006842200480087692,
+            "avg_speed": 1.9399675561234055,
+            "possession_time": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "dribbles": {
+                "successful": 2,
+                "unsuccessful": 4,
+                "dribble": {
+                    "successful": 2,
+                    "unsuccessful": 1
+                },
+                "one_vs_one": {
+                    "successful": 0,
+                    "unsuccessful": 2
+                },
+                "one_vs_two": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 0,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "possession_percentage": 31.88405797101449
+        },
+        "team2": {
+            "total_distance": 0.00775978769969882,
+            "avg_speed": 2.0876212499800095,
+            "possession_time": 0,
+            "shots": {
+                "close": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "long": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                }
+            },
+            "dribbles": {
+                "successful": 6,
+                "unsuccessful": 2,
+                "dribble": {
+                    "successful": 3,
+                    "unsuccessful": 0
+                },
+                "one_vs_one": {
+                    "successful": 2,
+                    "unsuccessful": 1
+                },
+                "one_vs_two": {
+                    "successful": 1,
+                    "unsuccessful": 1
+                },
+                "special": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "passes": {
+                "successful": 0,
+                "unsuccessful": 1,
+                "long_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 1
+                },
+                "long_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_ground_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                },
+                "short_aerial_pass": {
+                    "successful": 0,
+                    "unsuccessful": 0
+                }
+            },
+            "possession_percentage": 68.11594202898551
+        }
+    },
+    "ball_possession": {
+        "team1_frames": 66,
+        "team2_frames": 141
+    },
+    "shot_stats": {
+        "total_shots": 2,
+        "close_shots": {
+            "successful": 0,
+            "unsuccessful": 1
+        },
+        "long_shots": {
+            "successful": 0,
+            "unsuccessful": 1
+        }
+    },
+    "shots": [
+        {
+            "frame": 52,
+            "type": "long",
+            "successful": false,
+            "distance_to_goal": 422.49733726971584,
+            "speed": 125.31959144523253,
+            "player_id": 15,
+            "team": 2
+        },
+        {
+            "frame": 175,
+            "type": "close",
+            "successful": false,
+            "distance_to_goal": 291.89210335327675,
+            "speed": 396.60811892849597,
+            "player_id": 21,
+            "team": 2
+        }
+    ],
+    "dribble_stats": {
+        "total_dribbles": 14,
+        "dribble": {
+            "successful": 5,
+            "unsuccessful": 1
+        },
+        "one_vs_one": {
+            "successful": 2,
+            "unsuccessful": 3
+        },
+        "one_vs_two": {
+            "successful": 1,
+            "unsuccessful": 2
+        },
+        "special": {
+            "successful": 0,
+            "unsuccessful": 0
+        }
+    },
+    "dribbles": [
+        {
+            "type": "one_vs_one",
+            "start_frame": 1,
+            "end_frame": 31,
+            "successful": false,
+            "is_special": false,
+            "duration": 30,
+            "direction_changes": 14,
+            "max_speed": 0.0,
+            "opponent_count": 1,
+            "player_id": 21,
+            "team": 2
+        },
+        {
+            "type": "one_vs_one",
+            "start_frame": 21,
+            "end_frame": 38,
+            "successful": false,
+            "is_special": false,
+            "duration": 17,
+            "direction_changes": 12,
+            "max_speed": 0.0,
+            "opponent_count": 1,
+            "player_id": 11,
+            "team": 1
+        },
+        {
+            "type": "one_vs_one",
+            "start_frame": 35,
+            "end_frame": 51,
+            "successful": true,
+            "is_special": false,
+            "duration": 16,
+            "direction_changes": 11,
+            "max_speed": 0.0,
+            "opponent_count": 1,
+            "player_id": 15,
+            "team": 2
+        },
+        {
+            "type": "dribble",
+            "start_frame": 46,
+            "end_frame": 54,
+            "successful": false,
+            "is_special": false,
+            "duration": 8,
+            "direction_changes": 4,
+            "max_speed": 0.0,
+            "opponent_count": 4,
+            "player_id": 8,
+            "team": 1
+        },
+        {
+            "type": "one_vs_two",
+            "start_frame": 51,
+            "end_frame": 59,
+            "successful": false,
+            "is_special": false,
+            "duration": 8,
+            "direction_changes": 1,
+            "max_speed": 0.0,
+            "opponent_count": 2,
+            "player_id": 24,
+            "team": 2
+        },
+        {
+            "type": "one_vs_one",
+            "start_frame": 52,
+            "end_frame": 62,
+            "successful": true,
+            "is_special": false,
+            "duration": 10,
+            "direction_changes": 7,
+            "max_speed": 0.0,
+            "opponent_count": 1,
+            "player_id": 15,
+            "team": 2
+        },
+        {
+            "type": "dribble",
+            "start_frame": 59,
+            "end_frame": 146,
+            "successful": true,
+            "is_special": false,
+            "duration": 87,
+            "direction_changes": 4,
+            "max_speed": 0.0,
+            "opponent_count": 4,
+            "player_id": 8,
+            "team": 1
+        },
+        {
+            "type": "dribble",
+            "start_frame": 122,
+            "end_frame": 146,
+            "successful": true,
+            "is_special": false,
+            "duration": 24,
+            "direction_changes": 19,
+            "max_speed": 9.128702881958208,
+            "opponent_count": 3,
+            "player_id": 5,
+            "team": 1
+        },
+        {
+            "type": "dribble",
+            "start_frame": 62,
+            "end_frame": 148,
+            "successful": true,
+            "is_special": false,
+            "duration": 86,
+            "direction_changes": 55,
+            "max_speed": 0.0,
+            "opponent_count": 3,
+            "player_id": 24,
+            "team": 2
+        },
+        {
+            "type": "one_vs_two",
+            "start_frame": 141,
+            "end_frame": 175,
+            "successful": false,
+            "is_special": false,
+            "duration": 34,
+            "direction_changes": 7,
+            "max_speed": 12.730058093813327,
+            "opponent_count": 2,
+            "player_id": 7,
+            "team": 1
+        },
+        {
+            "type": "dribble",
+            "start_frame": 148,
+            "end_frame": 175,
+            "successful": true,
+            "is_special": false,
+            "duration": 27,
+            "direction_changes": 8,
+            "max_speed": 9.685770775567207,
+            "opponent_count": 3,
+            "player_id": 19,
+            "team": 2
+        },
+        {
+            "type": "one_vs_one",
+            "start_frame": 156,
+            "end_frame": 175,
+            "successful": false,
+            "is_special": false,
+            "duration": 19,
+            "direction_changes": 19,
+            "max_speed": 7.460483045434676,
+            "opponent_count": 1,
+            "player_id": 22,
+            "team": 1
+        },
+        {
+            "type": "dribble",
+            "start_frame": 176,
+            "end_frame": 184,
+            "successful": true,
+            "is_special": false,
+            "duration": 8,
+            "direction_changes": 4,
+            "max_speed": 19.8872274104949,
+            "opponent_count": 3,
+            "player_id": 19,
+            "team": 2
+        },
+        {
+            "type": "one_vs_two",
+            "start_frame": 180,
+            "end_frame": 188,
+            "successful": true,
+            "is_special": false,
+            "duration": 8,
+            "direction_changes": 0,
+            "max_speed": 3.9087470435356346,
+            "opponent_count": 2,
+            "player_id": 2,
+            "team": 2
+        }
+    ],
+    "pass_stats": {
+        "total_passes": 1,
+        "successful_passes": 0,
+        "unsuccessful_passes": 1,
+        "pass_types": {
+            "long_ground_pass": {
+                "total": 1,
+                "successful": 0,
+                "unsuccessful": 1
+            },
+            "long_aerial_pass": {
+                "total": 0,
+                "successful": 0,
+                "unsuccessful": 0
+            },
+            "short_ground_pass": {
+                "total": 0,
+                "successful": 0,
+                "unsuccessful": 0
+            },
+            "short_aerial_pass": {
+                "total": 0,
+                "successful": 0,
+                "unsuccessful": 0
+            }
+        }
+    },
+    "passes": [
+        {
+            "start_frame": 175,
+            "end_frame": 196,
+            "pass_type": "long_ground_pass",
+            "successful": false,
+            "pass_distance": null,
+            "initial_ball_speed": 396.60811892849597,
+            "sender_id": 21,
+            "sender_team": 2
+        }
+    ]
+}
