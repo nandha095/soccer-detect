@@ -374,7 +374,7 @@ def main():
     BATCH_SIZE = 100  # Adjust based on your system's memory
 
     # Read video frames in batches
-    video_path = 'input_videos/1.mp4'  # change source video here
+    video_path = 'input_videos/3.mp4'  # change source video here
     
     # Get video info first
     cap = cv2.VideoCapture(video_path)
